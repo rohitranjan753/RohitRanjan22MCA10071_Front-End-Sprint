@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class DashBoardScreen extends StatefulWidget {
   const DashBoardScreen({Key? key}) : super(key: key);
@@ -13,107 +12,190 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
   Widget build(BuildContext context) {
     double myHeight = MediaQuery.of(context).size.height;
     double myWidth = MediaQuery.of(context).size.width;
-    return Column(
-      children: [
-        Container(
-          margin: EdgeInsets.all(10),
-          width: myWidth*0.9,
-          height: myHeight*0.5,
-          child: Stack(
-            children: [
-              Positioned(
-                // australiangpt7S (0:164)
-                left: 30,
-                top: 200,
-                child: Align(
-                  child: SizedBox(
-                    width: 115,
-                    height: 25,
+    return Scaffold(
+      body: Column(
+        children: [
+          //firstcontainer
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.grey,
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(color: Colors.black,width: 3)
+            ),
+            margin: EdgeInsets.all(10),
+            width: myWidth * 0.9,
+            height: myHeight * 0.4,
+            child: Container(
+              child: Stack(
+                children: [
+                  Positioned(
+                      child: Container(
+                        height: myHeight*0.2,
+                          child: Image.asset("assets/images/racetrac.png"))),
+                  Positioned(
+                    // australiangpt7S (0:164)
+                    left: 30,
+                    top: 200,
                     child: Text(
                       'Australian GP',
                     ),
                   ),
-                ),
-              ),
-              Positioned(
-                // frame304Lk8 (0:168)
-                left: 70,
-                top: 20,
-                child: Container(
-                  width: 250,
-                  height: 160,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        // vector104T44 (0:169)
-                        left: 20,
-                        top: 12,
-                        child: Align(
-                          child: SizedBox(
-                            width: 212,
-                            height: 140,
-                            child: Image.asset(
-                              'assets/page-1/images/vector-104.png',
-                              width: 211,
-                              height:140,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        // vector65wE8 (0:170)
-                        left: 0,
-                        top: 0,
-                        child: Align(
-                          child: SizedBox(
-                            width: 250,
-                            height: 160,
-                            child: Image.asset(
-                              'assets/page-1/images/vector-65.png',
-                              width: 250,
-                              height: 160,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 135,
-                        top: 135,
-                        child: Align(
-                          child: SizedBox(
-                            width: 28,
-                            height: 19,
-                            child: Image.asset(
-                              'assets/images/racetracck.png',
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              Positioned(
-                // kA6t (0:175)
-                left: 315,
-                top: 196,
-                child: Align(
-                  child: SizedBox(
-                    width: 43,
-                    height: 29,
+                  Positioned(
+                    // australiangpt7S (0:164)
+                    left: 30,
+                    top: 210,
                     child: Text(
-                      '16K',
-                      textAlign: TextAlign.right,
-
+                      'Melbourne',
                     ),
                   ),
-                ),
+                  Positioned(
+                    // australiangpt7S (0:164)
+                    left: 300,
+                    top: 200,
+                    child: Text(
+                      '16K',
+                    ),
+                  ),
+                  Positioned(
+                    // australiangpt7S (0:164)
+                    left: 300,
+                    top: 210,
+                    child: Text(
+                      'Participants',
+                    ),
+                  ),
+                  Positioned(
+                    // australiangpt7S (0:164)
+                    left: 30,
+                    top: 230,
+                    child: Text(
+                      '31st Mar - 2nd April',
+                    ),
+                  ),
+                  Positioned(
+                    // australiangpt7S (0:164)
+                    left: 250,
+                    top: 230,
+                    child: Container(
+                      width: myWidth*0.3,
+                      height: myHeight*0.03,
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.transparent),
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.blue,
+                      ),
+                      child: Text("36,000 Pool raised",style: TextStyle(
+                        color: Colors.white,fontWeight: FontWeight.bold
+                      ),),
+                    )
+                  ),
+                  Positioned(
+                    // australiangpt7S (0:164)
+                    left: 30,
+                    top: 270,
+                    child: MaterialButton(
+                      onPressed: () {
+
+                      },
+                      minWidth: myWidth*0.8,
+                      height: 40,
+                      color: Colors.red,
+                      elevation: 2,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Text(
+                        "Palce Bet",
+                        style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ),
+
+                ],
               ),
+            ),
+          ),
+          Row(
+            children: [
+              Text("Lockdown in"),
+              Text("06:12:44",style: TextStyle(
+                color: Colors.cyan,fontWeight: FontWeight.bold
+              ),),
             ],
           ),
-        ),
-      ],
+
+
+          //secondcontainer
+          Container(
+            decoration: BoxDecoration(
+                color: Colors.grey,
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(color: Colors.black,width: 3)
+            ),
+            margin: EdgeInsets.all(10),
+            width: myWidth * 0.9,
+            height: myHeight * 0.25,
+            child: Container(
+              child: Stack(
+                children: [
+                  Positioned(
+                    // australiangpt7S (0:164)
+                    left: 30,
+                    top: 20,
+                    child: Text(
+                      'Available Funds',style: TextStyle(
+                      fontSize: 20
+                    ),
+                    ),
+                  ),
+                  Positioned(
+                    // australiangpt7S (0:164)
+                    left: 30,
+                    top: 38,
+                    child: Text(
+                      '\$16.000',style: TextStyle(
+                      fontSize: 40,
+                      fontWeight: FontWeight.bold
+                    ),
+                    ),
+                  ),
+
+                  Positioned(
+                    // australiangpt7S (0:164)
+                    left: 30,
+                    top: 100,
+                    child: Text(
+                      'Amount Withdrawn',
+                    ),
+                  ),
+                  Positioned(
+                    // australiangpt7S (0:164)
+                    left: 30,
+                    top: 120,
+                    child: Text(
+                      '\$10,000',style: TextStyle(
+                        fontSize: 38,
+                        fontWeight: FontWeight.bold
+                    ),
+                    ),
+                  ),
+
+                  Positioned(
+                    // australiangpt7S (0:164)
+                    left: 30,
+                    top: 175,
+                    child: Text(
+                      'Last withdrawn: 26 Feb',
+                    ),
+                  ),
+
+
+                ],
+              ),
+            ),
+          ),
+
+        ],
+      ),
     );
   }
 }
