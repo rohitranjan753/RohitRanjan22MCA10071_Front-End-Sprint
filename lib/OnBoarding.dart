@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rohit_frontendsprintmca/LoginScreen.dart';
+import 'package:rohit_frontendsprintmca/SignupScreen.dart';
 
 class OnBorading extends StatefulWidget {
   const OnBorading({Key? key}) : super(key: key);
@@ -33,7 +34,9 @@ class _OnBoradingState extends State<OnBorading> {
                     width: myWidth*0.8,
                       child: Image.asset("assets/images/formula1_helmet.png")),
                   MaterialButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>SignupScreen()));
+                    },
                     minWidth: double.infinity,
                     height: 60,
                     color: Colors.white,
