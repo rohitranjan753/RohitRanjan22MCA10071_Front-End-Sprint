@@ -304,122 +304,82 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                   border: Border.all(color: Colors.black, width: 3)),
               margin: EdgeInsets.all(10),
               width: myWidth * 0.9,
-              height: myHeight * 0.25,
+              height: myHeight * 0.2,
               child: Container(
                 child: Stack(
                   children: [
                     Positioned(
-
                       left: 30,
                       top: 20,
                       child: Text(
-                        'Available Funds',
+                        'Race 2',
                         style: TextStyle(fontSize: 20),
                       ),
                     ),
                     Positioned(
-
-                      left: 300,
-                      top: 20,
-                      child: Text(
-                        'Placed',
-                        style: TextStyle(fontSize: 20),
-                      ),
-                    ),
-                    Positioned(
-
                       left: 30,
-                      top: 38,
+                      top: 40,
                       child: Text(
-                        '\$16.000',
-                        style:
-                        TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+                        'JEDDAH',
+                        style: TextStyle(fontSize: 20,color: Colors.deepOrange,fontWeight: FontWeight.bold),
                       ),
                     ),
                     Positioned(
-                      // australiangpt7S (0:164)
-                      left: 300,
-                      top: 38,
+                      left: 30,
+                      top: 60,
                       child: Text(
-                        '3rd',
-                        style: TextStyle(
-                            fontSize: 40,
-                            color: Colors.red,
-                            fontWeight: FontWeight.bold),
+                        'Saudi Arabian',
+                        style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
                       ),
                     ),
                     Positioned(
-
-                      left: 280,
-                      top: 67,
+                      left: 30,
+                      top: 75,
                       child: Text(
-                        'in last race',
-                        style:
-                        TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                        'Grand Pix',
+                        style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
                       ),
                     ),
                     Positioned(
-
-                      left: 260,
-                      top: 100,
+                      left: 30,
+                      top: 75,
                       child: Text(
-                        'Last Winnings',
-                        style:
-                        TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                    Positioned(
-                      left: 310,
-                      top: 120,
-                      child: Text(
-                        '\$5800',
-                        style:
-                        TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                    Positioned(
-                      left: 260,
-                      top: 150,
-                      child: Text(
-                        'Total Winnings',
-                        style:
-                        TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                    Positioned(
-                      left: 310,
-                      top: 170,
-                      child: Text(
-                        '\$9200',
-                        style:
-                        TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                        'Grand Pix',
+                        style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
                       ),
                     ),
                     Positioned(
 
                       left: 30,
                       top: 100,
-                      child: Text(
-                        'Amount Withdrawn',
-                      ),
-                    ),
-                    Positioned(
+                      child: MaterialButton(
+                        onPressed: () {
 
-                      left: 30,
-                      top: 120,
-                      child: Text(
-                        '\$10,000',
-                        style:
-                        TextStyle(fontSize: 38, fontWeight: FontWeight.bold),
+                        },
+                        height: 40,
+                        color: Colors.grey[400],
+                        elevation: 5,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                        child: Text(
+                          "17-19 March",
+                          style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold),
+                        ),
                       ),
                     ),
                     Positioned(
-                      left: 30,
-                      top: 175,
-                      child: Text(
-                        'Last withdrawn: 26 Feb',
-                      ),
+                      left: 200,
+                      top: 10,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(30),
+                          border: Border.all(color: Colors.transparent,)
+                        ),
+                        height: 100,
+                          child: Image.asset("assets/images/racetrac.png")),
                     ),
+
                   ],
                 ),
               ),

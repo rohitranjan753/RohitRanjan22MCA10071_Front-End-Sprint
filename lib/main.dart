@@ -16,10 +16,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
+        fontFamily: 'formulaFont',
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: DashBoardScreen())
+      home: OnBorading())
     ;
   }
 }
