@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:rohit_frontendsprintmca/DashboardScreen.dart';
+import 'package:rohit_frontendsprintmca/SignupScreen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -18,6 +20,7 @@ class _LoginScreenState extends State<LoginScreen> {
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+
           children: [
             Container(
               height: myHeight*0.3,
@@ -25,7 +28,9 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Image.asset("assets/images/82024-finish-flags.gif"),
 
             ),
+            SizedBox(height: 20,),
             Text("Login",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: Colors.white),),
+            SizedBox(height: 10,),
             Text("Enter your email and password to login",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.white),),
             SizedBox(height: 40,),
             Padding(
@@ -106,7 +111,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   SizedBox(height: 30,),
                   MaterialButton(
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginScreen()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>DashBoardScreen()));
                     },
                     minWidth: double.infinity,
                     height: 60,
@@ -124,7 +129,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text("I am a new user!",style: TextStyle(color: Colors.white),),
-                      MaterialButton(onPressed: (){},
+                      MaterialButton(onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>SignupScreen()));
+                      },
                       child: Text("Sign Up",style: TextStyle(color: Colors.cyan,fontSize: 20),),)
                     ],
                   )
